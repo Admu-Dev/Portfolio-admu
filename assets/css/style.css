@@ -1320,12 +1320,38 @@ ________________________________________________________________________________
 }
 
 
+/* 
+___________________________________________________________________________________________
+
+                     Section  Contact
+___________________________________________________________________________________________
+ */
+
+ .Contact {  
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 100px;
+  background-color: none;
+ /* background-image: url("../img/bg.webp");
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: cover;*/
+}
+
+.Contact h2{
+  color: var(--skin-color);
+  font-size: 75px;
+}
 
 
 /* 
 ___________________________________________________________________________________________
 
-                     Section  Skill
+                     Pages  Portfolio-details
 ___________________________________________________________________________________________
  */
 
@@ -1500,3 +1526,14 @@ ________________________________________________________________________________
   }
   
   }
+
+
+
+
+
+
+
+
+
+
+  
