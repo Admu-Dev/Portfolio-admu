@@ -1,0 +1,118 @@
+/* 
+___________________________________________________________________________________________
+
+                     Section  About Planches ECOLO
+___________________________________________________________________________________________
+ */
+
+
+ .about-planches {  
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 200px 0px;
+  }
+  
+  .about-planches h2 {
+    color: rgba(0, 0, 0, 0.712);
+    font-size: 60px;
+    position: relative;
+    cursor: default;
+    font-family: 'Original Surfer', cursive;
+    margin-bottom: 25px;
+  }
+
+  .about-planches .sous-titre {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    position: relative;
+    cursor: default;
+    font-family: 'Original Surfer', cursive;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  
+  .about-planches .container-cards-planches {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .about-planches .container-cards-planches .cards {
+    width: 600px;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: black;
+    margin:  30px 75px;
+    border-radius: 20px;
+    padding: 30px 0;
+    margin-bottom: 100px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  
+  .about-planches .container-cards-planches .cards img {
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+  }
+  
+  .about-planches .container-cards-planches .cards h3 {
+    font-size: clamp(20px, 2vw, 22px);
+    height: 10%;
+  }
+  
+  .about-planches .container-cards-planches .cards h4 {
+    text-align: justify;
+    color: rgba(22, 22, 22, 0.712);
+    font-size: clamp(15px, 2vw, 16px);
+    font-weight: 300;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    height: 45%;
+  }
+  
+ .about-planches .container-cards-planches .cards a {
+     text-decoration: none;
+     color: blue;
+     margin-top: 10px;
+ }
+
+
+
+
+
+
+ .about-planches .container-cards-planches .cards .yuyo {
+    width: auto;
+    height: 65%;
+    border-radius: 10px;
+ }
+
+ .about-planches .container-cards-planches .cards .carton {
+    width: auto;
+    height: 40%;
+    border-radius: 10px;
+ }
+
+ .about-planches .container-cards-planches .cards .text_carton {
+    height: 65%;
+    width: 85%;
+ }
+
+ .about-planches .container-cards-planches .cards .champignons {
+     height: 50%;
+     width: auto;
+ }
+
+ .about-planches .container-cards-planches .cards .resine-lin {
+  height: 50%;
+  width: auto;
+  } 

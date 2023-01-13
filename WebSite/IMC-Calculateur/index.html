@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site web calculateur IMC">
+    <meta name="author" content="Adrien">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./ressources/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./ressources/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./ressources/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./ressources/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./ressources/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>IMC Calculateur</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="Header">
+
+        <div class="Logo-title">
+            <a href="#Home"><img src="ressources/images/logo.webp" alt="Logo des sport extreme" /></a>
+        </div>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#Home">Accueil</a></li>
+                <li><a href="#About">À propos</a></li>
+                <li><a href="#IMC-Calculateur">IMC-Calculateur</a></li>
+            </ul>
+        </div>
+        <div class="top-nav">
+          <input id="menu-toggle" type="checkbox" />
+          <label class='menu-button-container' for="menu-toggle">
+          <div class='menu-button'></div>
+        </label>
+          <ul class="menu-burger">
+            <li><a href="#Home">Accueil</a></li>
+            <li><a href="#About">À propos</a></li>
+            <li><a href="#IMC-Calculateur">IMC-Calculateur</a></li>
+          </ul>
+        </div>
+
+        <div>
+            <ul class="wrapper">
+              <a href="https://github.com/Admu-Dev">
+                <li class="icon github">
+                  <span class="tooltip">Github</span>
+                  <span><i class="fab fa-github"></i></span>
+                </li>
+              </a>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="Home" id="Home">
+
+            <div class="text-box">
+                <h1>IMC</h1>
+                <h2>Indice de Masse Corporelle</h2>
+                <p>Mesure qui permette de classifier la maigreur, le surpoids et l'obésité chez les individus adultes.</p>
+            </div>
+
+            <div class="image-box">
+                <img src="ressources/images/imc-illustraiton.webp"
+                    alt="illustration IMC">
+            </div>
+        </section>
+
+        <section class="about" id="About">
+            <div class="container">
+                <div class="container-text">
+                    <h3>QU’EST-CE QUE L'INDICE DE MASSE CORPORELLE (IMC) ?</h3>
+                    <p><span>Qu'est-ce que l'IMC ?</span></br>
+                        L'indice de masse corporelle montre la relation entre le poids et la taille. En fonction des résultats de votre calcul d'IMC, ainsi que de votre âge et de votre sexe, notre calculateur d'IMC estimera une valeur indiquant avec précision si votre poids est normal.</br></br>
+                        <span>Quel IMC devriez-vous avoir ?</span></br>
+                        Le tableau suivant de l'indice de masse corporelle montre différentes catégories de poids selon l'âge et le sexe. Il indique également si vous êtes à la limite du surpoids ou de l'insuffisance pondérale. Par exemple, votre poids est normal, mais vous pouvez être en surpoids ou à la limite du surpoids.
+                        Selon votre constitution actuelle et votre état de santé, vous devrez peut-être augmenter ou diminuer la dose. Pour les valeurs extrêmes, contactez votre médecin pour discuter des mesures nécessaires pour réduire vos risques pour la santé.</br></br>
+                        
+                        Noter ! L'IMC et son calcul sont principalement destinés aux adultes. L'IMC d'un enfant ou d'un adolescent suit différents indicateurs à mesure que les personnes de 0 à 18 ans continuent de grandir et que leur rapport poids/taille change.
+                        Bon à savoir : Les personnes bien entraînées ont souvent un IMC très élevé. Pour ces personnes, l'analyse de la graisse corporelle est plus appropriée.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="IMC-Calculateur" id="IMC-Calculateur">
+            <div class="container">
+              <div class="container-text">
+                <h3>CALCULEZ MAINTENANT VOTRE IMC</h3>
+                <p class="text-imc">
+                  Vous vous demandez quel est votre poids idéal ? L’Indice de Masse Corporelle (IMC) peut vous aider à mieux le connaître. L’IMC a une formule toute simple :  il se calcule en divisant votre poids par votre taille au carré
+                </p>
+                <br>
+                <h4>LA FORMULE IMC</h4>
+                <p class="text-formule">
+                  Voici la formule pour calculer l’IMC que vous soyez une femme ou un homme :<br>
+                  
+                  <span class="span">IMC = (masse corporelle en kilos) / (taille en mètres)²</span><br>
+                  
+                  Notez que l’IMC qui indique un poids idéal – c’est-à-dire sain – dépend aussi de votre sexe et de votre âge.
+                  
+                  </p>
+              </div>
+              <div class="container-form">
+                <form action="" method="post" name="ideal" id="ideal">
+            
+                  <label>
+                    <span class="label-text">Poids (kg) </span>
+                  
+                    <input value="Entrez votre poids ici" name="poids" OnFocus="this.value=''" size="30" type="number" required>
+                  </label>
+                  <label>
+                    <span class="label-text">Taille (cm)</span>
+                    </button>
+                    <input value="Entrez votre taille (en cm)" name="taille" OnFocus="this.value=''" size="30" type="number" required>
+                  </label>
+            
+                  <div class="text-center">
+                      <input type="button" value="Je calcul mon IMC" name="calculez" class="button" OnClick="Valider(this.form)">
+                      <input type="reset" onclick="history.go(0)" class="button-63" value="Remettre à zero" name="reset">
+                  </div>
+                </form>
+
+                <div id="alert-erreur" class="alert" role="alert"></div>
+                <div id="alert-IMC" class="alert" role="alert"></div>
+                <div id="info-IMC" class="alert" role="alert"></div>
+                <div id="IMC_ideal" class="alert" role="alert"></div>
+              </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h3>About</h3>
+              <p class="text-justify">L'indice de masse corporelle montre la relation entre le poids et la taille. En fonction des résultats de votre calcul d'IMC, ainsi que de votre âge et de votre sexe, notre calculateur d'IMC estimera une valeur indiquant avec précision si votre poids est normal.</p>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h3>Categories</h3>
+              <ul class="footer-links">
+                <li><a href="#Home">Accueil</a></li>
+                <li><a href="#About">A propos</a></li>
+                <li><a href="#IMC-Calculateur">Calculateur</a></li>
+              </ul>
+            </div>
+    
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                <a href="#">Adrien</a>.
+              </p>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="https://fr-fr.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://twitter.com/?lang=fr"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="https://dribbble.com/"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="https://fr.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script language="JavaScript" type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

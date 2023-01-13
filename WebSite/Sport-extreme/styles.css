@@ -1,0 +1,366 @@
+/* 
+__________________________________________________________________________
+
+                  Font Family
+__________________________________________________________________________ 
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*
+__________________________________________________________________________
+
+                    Reset
+__________________________________________________________________________
+ */
+ 
+* {
+
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(231, 38, 54) #282C34;
+}
+
+*::-webkit-scrollbar {
+  width: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #282C34
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(231, 38, 54);
+  border-radius: 20px;
+}
+
+
+/*
+__________________________________________________________________________
+
+                    Header
+__________________________________________________________________________
+ */
+
+
+header {
+  position: fixed;
+  width: 100%;
+  min-height: 8vh;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  text-decoration: none;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.850));
+    box-shadow: 0 0 20px #c0c2c5;
+  
+}
+
+header .Logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none ;
+}
+
+header .menu ul li a{
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 21px;
+  margin: 0 20px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.8s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header .menu ul li a i{
+  margin: 0 3px;
+}
+
+header .menu ul li:hover a{
+  border-bottom: 2px solid rgb(231, 38, 54);
+}
+
+header .Logo-title img {
+  width: 70px;
+}
+
+header .Logo-title h2 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+/* 
+___________________________________________________________________________________________
+
+                    Section  Home
+___________________________________________________________________________________________
+ */
+
+
+.Home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  background-image: url(ressources/images/fond-sport-extreme.webp);
+  background-size: 100%;
+  background-position: center !important;
+  background-repeat: no-repeat;
+}
+.Home .text-box {
+  width: 450px;
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 400px;
+}
+
+.Home .text-box h1 {
+  color:rgb(231, 38, 54);
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: #282C34 4px 3px;
+}
+
+.Home .text-box img {
+  width: 450px;
+  margin-left: 225px;
+  margin-bottom: 50px;
+}
+
+.Home .image-box {
+    width: 400px;
+    margin-top: 500px;
+    margin-left: 50px;
+}
+
+
+.Home .image-box img{
+  width: 100%;
+}
+
+
+
+/* 
+___________________________________________________________________________________________
+
+                     Section  Sport Extreme
+___________________________________________________________________________________________
+ */
+
+
+.Sport-All {  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.Sport-All h2 {
+  color: rgba(0, 0, 0, 0.712);
+  font-size: 60px;
+  margin: 110px 0;
+  position: relative;
+  cursor: default;
+}
+
+
+ .Sport-All .container-Sport .cards{
+  display:flex;
+  justify-content:center;
+  align-items:center
+ }
+
+ .Sport-All .container-Sport .cards{
+  width: 1400px;
+  margin: 50px;
+ }
+
+ .Sport-All .cards-img {
+  width:700px;
+  margin-right:80px
+ }
+
+ .Sport-All .cards-img img {
+  width:100%;
+ }
+
+ .Sport-All .cards-img .img-rigth {
+  box-shadow: rgba(240, 46, 46, 0.4) 5px 5px, rgba(240, 46, 46, 0.3) 10px 10px, rgba(240, 46, 46, 0.2) 15px 15px, rgba(240, 46, 46, 0.1) 20px 20px, rgba(240, 46, 46, 0.05) 25px 25px, rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+
+ .Sport-All .cards-img .img-left {
+  box-shadow: rgba(240, 46, 46, 0.4) -5px 5px, rgba(240, 46, 46, 0.3) -10px 10px, rgba(240, 46, 46, 0.2) -15px 15px, rgba(240, 46, 46, 0.1) -20px 20px, rgba(240, 46, 46, 0.05) -25px 25px, rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+ .Sport-All .cards-text {
+  width:600px
+ }
+
+ .Sport-All .cards-text h3 {
+  color:#282C34;
+  font-size:30px;
+  letter-spacing:3px
+ }
+ 
+ .Sport-All .cards-text h3 span {
+  color:#e63946
+ }
+
+ .Sport-All .cards-text p {
+  font-size: 18px;
+  color:rgba(0, 0, 0, 0.8);
+  margin-top:40px;
+  text-align:left;
+  letter-spacing:2px
+ }
+
+
+
+
+/* 
+___________________________________________________________________________________________
+
+                     Section  About
+___________________________________________________________________________________________
+ */
+
+
+
+
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+ }
+
+ .about .container {
+  display:flex;
+  justify-content:center;
+  align-items:center
+ }
+
+ .about .container {
+  width:1400px
+ }
+
+ .about .container-image {
+  width:550px;
+  margin-right:80px
+ }
+
+ .about .container-image img {
+  width:100%
+ }
+
+ .about .container-text {
+  width:600px
+ }
+
+ .about .container-text h3 {
+  color:#282C34;
+  font-size:30px;
+  letter-spacing:3px
+ }
+ 
+ .about .container-text h3 span {
+  color:#e63946
+ }
+
+ .about .container-text p {
+  font-size: 18px;
+  color:rgba(0, 0, 0, 0.8);
+  margin-top:40px;
+  text-align:left;
+  letter-spacing:2px
+ }
+
+
+
+/* 
+___________________________________________________________________________________________
+
+                     Section  Contact
+___________________________________________________________________________________________
+ */
+
+ 
+.Contact {  
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 100px;
+}
+
+.Contact img {  
+ width: 600px;
+ margin: 50px;
+}
+
+
+.Contact h2 {
+  color: rgba(0, 0, 0, 0.712);
+  font-size: 60px;
+  position: relative;
+  cursor: default;
+}
+
+.Contact .container-contact{
+  width: 70%;
+  height: 200px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background: #dbdbdb;
+}
+
+
+
+/* 
+___________________________________________________________________________________________
+
+                      FOOTER
+___________________________________________________________________________________________
+ */
+
+
+ footer {
+  position: end;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  text-align: center; 
+}
+
+
+footer p {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+}
+  
