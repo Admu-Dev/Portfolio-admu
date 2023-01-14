@@ -38,7 +38,7 @@
     mail($to, $sujet, $msg, $headers);
     header('Location: ../index.html#contact');
     echo '<script type="text/javascript">' . 
-    'document.getElementById("sent-message").innerHTML = "Your message has been sent. Thank you!";
+    'document.getElementById("sent-message").innerHTML = "Votre message a été envoyé. Merci !";
     
     document.getElementById("sent-message").classList.add("alert-success")' .
     '</script>';
