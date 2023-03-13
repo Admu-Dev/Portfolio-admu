@@ -1,35 +1,75 @@
-# BEGIN Cache-Control Headers
+
+# Activer la compression Gzip
+<IfModule mod_deflate.c>
+    # Compression pour les navigateurs qui supportent Gzip
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript application/json
+    # Ne pas compresser les fichiers suivants
+    SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|svg|js|css)$ no-gzip dont-vary
+    # Ne pas compresser les fichiers de plus de 4Mo
+    SetEnvIfNoCase Request_Size > 4096000 no-gzip dont-vary
+    # Ne pas compresser les fichiers en dessous de 1Ko
+    SetEnvIfNoCase Request_Size < 1024 no-gzip dont-vary
+    # Ne pas compresser les fichiers en dessous de 256 bits
+    SetEnvIfNoCase Request_Meets_Condition !"(^$|^0$)" dont-vary
+</IfModule>
+
+# Activer le cache
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    # Images
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    # CSS, JavaScript
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    # HTML, XML, JSON
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType application/json "access plus 0 seconds"
+    # Fichiers de fonts
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+</IfModule>
+
+# Activer le cache via ETag
+FileETag MTime Size
+
+# Désactiver ETags pour éviter les requêtes inutiles
 <IfModule mod_headers.c>
-<FilesMatch "\.(ico|jpe?g|png|gif|swf|css|gz)$">
-Header set Cache-Control "max-age=2592000, public"
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# Désactiver Last-Modified pour éviter les requêtes inutiles
+<IfModule mod_headers.c>
+    Header unset Last-Modified
+</IfModule>
+
+# Désactiver l'affichage des fichiers de configuration
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+    Satisfy All
 </FilesMatch>
+
+# Activer le cache pour les fichiers statiques
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+    Header set Cache-Control "max-age=259200
+
 <FilesMatch "\.(js)$">
 Header set Cache-Control "max-age=2592000, private"
 </FilesMatch>
+
 <filesMatch "\.(html|htm)$">
 Header set Cache-Control "max-age=7200, public"
 </filesMatch>
-# Enleve le cache pour les ressources dynamiques
-<FilesMatch "\.(pl|php|cgi|spl|scgi|fcgi)$">
-Header unset Cache-Control
-</FilesMatch>
-</IfModule>
-# END Cache-Control Headers
-
-
-# Activer la mise en cache
-<IfModule mod_expires.c>
-  ExpiresActive On
-  # Cache les images pendant 1 an
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  # Cache les fichiers CSS pendant 1 mois
-  ExpiresByType text/css "access plus 1 month"
-  # Cache les fichiers JS pendant 1 ans
-  ExpiresByType application/javascript "access plus 1 year"
-</IfModule>
-
-
