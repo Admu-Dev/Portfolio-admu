@@ -63,7 +63,10 @@ __________________________________________________________________________
 __________________________________________________________________________
  */ 
 
-var swiper = new Swiper(".mySwiper", {
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+
+
+const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
@@ -79,13 +82,3 @@ var swiper = new Swiper(".mySwiper", {
     delay: 5000,
   },
 });
-
-
-
-
-/*
-__________________________________________________________________________
-
-                Footer
-__________________________________________________________________________
- */ 
